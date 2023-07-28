@@ -1,5 +1,6 @@
 import { Button, Input, Select } from '@chakra-ui/react'
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export const Interview = () => {
     return (
@@ -33,13 +34,13 @@ export const Interview = () => {
                         <option value='option3'>2 Year</option>
                     </Select>
                     <br />
-                    <Button colorScheme='blue' width={"100%"}>Start</Button>
+                    <Link to={"/start"}><Button colorScheme='blue' width={"100%"}>Start</Button></Link>
                 </div>
                 <div>
                     <img src="https://cdn.dribbble.com/users/2704931/screenshots/7048399/media/e9125c8957513a73a246798b8b21350d.png" alt="" />
                 </div>
             </div>
-
+{/* luv */}
         </div>
     )
 }
