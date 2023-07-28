@@ -9,6 +9,10 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Message {
 
-    private String role;
-    private String content;//prompt
-}
+	    private String role;
+	    private String content;
+
+	    // constructor, getters and setters
+	}
+
+

@@ -10,6 +10,6 @@ import lombok.NoArgsConstructor;
 public class ScriptAIMessage {
 
 	private String role;
-	private String prompt;
+	private String content;
 	
 }
