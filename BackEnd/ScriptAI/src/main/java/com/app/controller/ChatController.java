@@ -31,28 +31,28 @@ public class ChatController {
     
     @GetMapping("/chat")
     public String chat(@RequestParam("prompt") String prompt, HttpSession session) {
-        // Retrieve the chat history from the session or create a new one if not exists
+       
         List<Message> chatHistory = (List<Message>) session.getAttribute("chatHistory");
         if (chatHistory == null) {
             chatHistory = new ArrayList<>();
         }
         
-        // Add the current message to the chat history
+      
         chatHistory.add(new Message("user", prompt));
 
-        // create a request
+       
         ChatRequest request = new ChatRequest(model, chatHistory);
-        // call the API
+      
         ChatResponse response = restTemplate.postForObject(apiUrl, request, ChatResponse.class);
 
         if (response == null || response.getChoices() == null || response.getChoices().isEmpty()) {
             return "No response";
         }
 
-        // return the first response
+      
         String reply = response.getChoices().get(0).getMessage().getContent();
         
-        // Store the updated chat history back into the session
+      
         session.setAttribute("chatHistory", chatHistory);
 
         return reply;

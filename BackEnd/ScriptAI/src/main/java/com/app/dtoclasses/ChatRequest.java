@@ -11,7 +11,8 @@ import lombok.NoArgsConstructor;
 public class ChatRequest {
 
 	  private String model;
-	    private List<Message> messages;
+
+	private List<Message> messages;
 
 	    public ChatRequest(String model, List<Message> messages) {
 	        this.model = model;
