@@ -1,0 +1,25 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+.Ftopbgimg{
+  background-image: url("https://wallpapercave.com/wp/wp4063812.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+.insiddivftop{
+  height:100vh;
+  background-color: rgba(255, 255, 255, 0.819);
+  color: rgba(0, 0, 0, 0.725);
+  font-size: 70px;
+  font-family: 'Alfa Slab One', cursive;
+  letter-spacing: 6px;
+}
+#cards:hover{
+  background-color: rgba(201, 132, 201, 0.47);
+  color: rgba(0, 0, 0, 0.364);
+}
+#socre-container{
+  height: 85vh;
+}
