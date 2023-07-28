@@ -1,22 +1,21 @@
 package com.app.dtoclasses;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+
+@NoArgsConstructor
 public class ChatRequest {
 
-    private String model;
-    private List<Message> messages;
-//    private int n;
-//    private double temperature;
+	  private String model;
+	    private List<Message> messages;
 
-    public ChatRequest(String model, String prompt) {
-        this.model = model;
-        this.messages = new ArrayList<>();
-        this.messages.add(new Message("user", prompt));
-    }
+	    public ChatRequest(String model, List<Message> messages) {
+	        this.model = model;
+	        this.messages = messages;
+	    }
 }
 
