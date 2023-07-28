@@ -15,8 +15,11 @@ public class ChatRequest {
 
     public ChatRequest(String model, String prompt) {
         this.model = model;
+        
         this.messages = new ArrayList<>();
         this.messages.add(new Message("user", prompt));
     }
+
+    // getters and setters
 }
 
