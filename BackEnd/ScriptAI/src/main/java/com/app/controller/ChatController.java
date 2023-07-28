@@ -32,12 +32,11 @@ public class ChatController {
     @GetMapping("/chat")
     public String chat(@RequestParam("prompt") String prompt, HttpSession session) {
        
-        List<Message> chatHistory = (List<Message>) session.getAttribute("chatHistory");
+        List<Message> chatHistory = (List<Message>) session.getAttribute("chatHistory" );
         if (chatHistory == null) {
             chatHistory = new ArrayList<>();
         }
         
-      
         chatHistory.add(new Message("user", prompt));
 
        
@@ -49,11 +48,11 @@ public class ChatController {
             return "No response";
         }
 
-      
+       
         String reply = response.getChoices().get(0).getMessage().getContent();
         
       
-        session.setAttribute("chatHistory", chatHistory);
+        session.setAttribute("chatHistory" , chatHistory);
 
         return reply;
     }
