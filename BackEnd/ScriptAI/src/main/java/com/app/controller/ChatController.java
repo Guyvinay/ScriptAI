@@ -13,29 +13,22 @@ import com.app.dtoclasses.ChatResponse;
 
 @RestController
 public class ChatController {
-    
     @Qualifier("openaiRestTemplate")
     @Autowired
     private RestTemplate restTemplate;
-    
     @Value("${openai.model}")
     private String model;
-    
     @Value("${openai.api.url}")
     private String apiUrl;
-    
     @GetMapping("/chat")
     public String chat(@RequestParam("prompt") String prompt) {
         // create a request
         ChatRequest request = new ChatRequest(model, prompt);
-        
         // call the API
         ChatResponse response = restTemplate.postForObject(apiUrl, request, ChatResponse.class);
-        
         if (response == null || response.getChoices() == null || response.getChoices().isEmpty()) {
             return "No response";
         }
-        
         // return the first response
         return response.getChoices().get(0).getMessage().getContent();
     }

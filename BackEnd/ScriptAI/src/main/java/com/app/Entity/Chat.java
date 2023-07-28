@@ -1,5 +1,6 @@
 package com.app.Entity;
 
+import jakarta.persistence.Entity;
 import lombok.Data;
 
 @Data
