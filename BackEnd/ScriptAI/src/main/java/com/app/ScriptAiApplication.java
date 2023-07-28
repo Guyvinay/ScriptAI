@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class ScriptAiApplication {
 
 	public static void main(String[] args) {
+
 		SpringApplication.run(ScriptAiApplication.class, args);
 	}
 
