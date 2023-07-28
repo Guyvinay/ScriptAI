@@ -45,7 +45,7 @@ public class ChatController {
         ChatResponse response = restTemplate.postForObject(apiUrl, request, ChatResponse.class);
 
         if (response == null || response.getChoices() == null || response.getChoices().isEmpty()) {
-            return "No response";
+            return "No response from the side";
         }
 
        
