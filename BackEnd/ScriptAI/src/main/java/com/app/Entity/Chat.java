@@ -1,12 +1,9 @@
 package com.app.Entity;
 
-import lombok.AllArgsConstructor;
+import jakarta.persistence.Entity;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
 public class Chat {
 
 	private Integer id;
