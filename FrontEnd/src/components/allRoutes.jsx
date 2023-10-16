@@ -10,7 +10,7 @@ export const AllRoutes = () => {
         <div>
             <Navbar />
             <Ftop />
-            <Interview />
+            <Interview /> 
             <Keybenifit />
             <Footer />
         </div>
